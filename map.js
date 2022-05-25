@@ -1,7 +1,8 @@
-export default function Map() {
+export default function Map({ props }) {
   return (
     <div>
-      <p>width:</p>;
+      <p>width:{props.width}</p>
+      <p>height:{props.length}</p>
     </div>
   );
 }
