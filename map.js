@@ -4,14 +4,15 @@ export default function Map({ props }) {
       <p>width:{props[0].width}</p>
       <p>height:{props[0].length}</p>
       {(() => {
-        let y = "";
+        let y = [];
         for (let j = 0; j < props[0].length; j++) {
+          let x = "";
           for (let i = 0; i < props[0].width; i++) {
-            y += "*";
+            x += "*";
           }
-          y += "\n";
+          y.push(x);
         }
-        return y;
+        return y[0];
       })()}
     </div>
   );
