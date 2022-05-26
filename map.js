@@ -12,7 +12,7 @@ export default function Map({ props }) {
           }
           y.push(x);
         }
-        return y[0];
+        return y.map(z => z);
       })()}
     </div>
   );
