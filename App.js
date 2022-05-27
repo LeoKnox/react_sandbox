@@ -1,7 +1,7 @@
 import "./styles.css";
 import Map from "./map.js";
 
-const data = [{ width: 5, length: 5 }];
+const data = { width: 5, length: 5 };
 
 export default function App() {
   return (
