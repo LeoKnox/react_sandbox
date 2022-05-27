@@ -6,13 +6,13 @@ export default function Map({ props }) {
       {(() => {
         let y = [];
         for (let j = 0; j < props[0].length; j++) {
-          let x = "";
+          let x = "|";
           for (let i = 0; i < props[0].width; i++) {
             x += "*";
           }
-          y.push(x);
+          y.push(x + "|");
         }
-        return y.map(z => <p>{z}</p>);
+        return y.map((z) => <p>{z}</p>);
       })()}
     </div>
   );
