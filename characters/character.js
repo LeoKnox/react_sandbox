@@ -1,11 +1,12 @@
 import { useState } from "react";
+import Fighter from "./fighter.js";
 
 export default function Character() {
-  const [player, setPlayer] = useState("fighter");
+  const [player, setPlayer] = useState(<Fighter />);
 
   return (
     <div>
-      <h1>Character {player}</h1>
+      <h1>Character</h1>
       <button
         type="button"
         onClick={() => setPlayer("wizard")}
@@ -14,6 +15,7 @@ export default function Character() {
         type="button"
         onClick={() => setPlayer("fighter")}
       >fighter</button>
+      {player}
     </div>
   );
 }
