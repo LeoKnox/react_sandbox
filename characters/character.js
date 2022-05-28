@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Fighter from "./fighter.js";
+import Wizard from "./wizard.js";
 
 export default function Character() {
   const [player, setPlayer] = useState(<Fighter />);
@@ -9,11 +10,11 @@ export default function Character() {
       <h1>Character</h1>
       <button
         type="button"
-        onClick={() => setPlayer("wizard")}
+        onClick={() => setPlayer(<Wizard />)}
       >wizard</button>
       <button
         type="button"
-        onClick={() => setPlayer("fighter")}
+        onClick={() => setPlayer(<Fighter />)}
       >fighter</button>
       {player}
     </div>
