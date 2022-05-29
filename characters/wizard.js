@@ -1,7 +1,10 @@
 export default function Wizard() {
+  const wizardStyle = {
+    color: "red",
+  };
   return (
     <>
-      <p>wizard</p>
+      <p style={wizardStyle}>wizard</p>
     </>
   );
 }
