@@ -4,6 +4,9 @@ import Wizard from "./wizard.js";
 
 export default function Character() {
   const [player, setPlayer] = useState(<Fighter />);
+  const charStyle = {
+    color: "blue"
+  };
 
   return (
     <div>
