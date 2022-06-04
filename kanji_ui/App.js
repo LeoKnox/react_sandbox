@@ -1,16 +1,19 @@
 import "./styles.css";
+import Kanjis from "./kanjis.js";
 
 export default function App() {
   let kanjiGrades = [1,2,3,4,5];
 
   function selectGrade() {
-    alert("grade")
+    return (
+      <Kanjis />
+    )
   }
 
   return (
     <div className="App">
     {kanjiGrades.map((grade, i) => (
-      <button id={i} onClick={selectGrade}>{grade}</button>
+      <button key={i} onClick={selectGrade}>{grade}</button>
     ))}
     </div>
   );
