@@ -6,7 +6,7 @@ export default function App() {
   let kanjiGrades = [1,2,3,4,5];
   let [grade, setGrade] = useState(1);
 
-  function selectGrade() {
+  const selectGrade = () => {
     selectGrade(2);
   }
 
