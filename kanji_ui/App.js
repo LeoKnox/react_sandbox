@@ -7,8 +7,8 @@ export default function App() {
   let [grade, setGrade] = useState(1);
 
   const selectGrade = () => {
-    selectGrade(2);
-  }
+    selectGrade(2, []);
+  };
 
   return (
     <div className="App">
