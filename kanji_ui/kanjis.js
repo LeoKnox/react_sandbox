@@ -1,5 +1,7 @@
-export default function Kanjis() {
+export default function Kanjis(props) {
   return (
-    <p>Grade</p>
+    <div>
+      <p>Grade {props.grade}</p>
+    </div>
   )
 }
