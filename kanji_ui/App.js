@@ -7,9 +7,7 @@ export default function App() {
   let [grade, setGrade] = useState(1);
 
   function selectGrade() {
-    return (
-      <Kanjis />
-    )
+    selectGrade(2);
   }
 
   return (
