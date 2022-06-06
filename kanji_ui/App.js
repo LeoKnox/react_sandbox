@@ -4,22 +4,30 @@ import { useState } from "react";
 
 export default function App() {
   let kanjiGrades = [1,2,3,4,5];
-  let [grade, setGrade] = useState(0);
+  const [grade, setGrade] = useState(0);
 
-  const selectGrade = () => {
-    selectGrade(2, []);
-  };
+  function changeGrade() {
+    setGrade((m) => {
+      if (m === 1) return <p>grade 1</p>;
+      return <p>grade</p>;
+    });
+  }
 
   return (
     <div className="App">
     {kanjiGrades.map((grade, i) => (
-      <button key={i} onClick={selectGrade}>{grade}</button>
+      <button key={i} onClick={changeGrade()}>{grade}</button>
     ))}
-    if (grade===0) {
-      <p>done</p>
-    } else {
-      <p>else</p>
-    }
+    <ShowGrades grades={grade} />
     </div>
   );
+}
+
+function ShowGrades({grade}) {
+  switch (grade) {
+    case 1:
+      return <Kanjis grade={grade} />;
+    default:
+      return <p>default</p>;
+  }
 }
