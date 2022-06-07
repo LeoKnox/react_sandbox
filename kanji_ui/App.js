@@ -9,7 +9,7 @@ export default function App() {
   function changeGrade(m=1) {
     switch(m) {
       case 1:
-        console.log("rture");
+        console.log(":"+m);
         return <p>true</p>;
       default:
         return <p>false</p>;
