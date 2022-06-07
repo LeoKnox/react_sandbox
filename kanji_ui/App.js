@@ -19,7 +19,7 @@ export default function App() {
   return (
     <div className="App">
     {kanjiGrades.map((grade, i) => (
-      <button key={i} onClick={() => changeGrade(i)}>{grade}</button>
+      <button key={i} onClick={()=>changeGrade({grade})}>{grade}</button>
     ))}
     <Kanjis grades={grade} />
     </div>
