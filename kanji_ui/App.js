@@ -9,6 +9,7 @@ export default function App() {
   function changeGrade(m=1) {
     switch(m) {
       case 1:
+        console.log("rture");
         return <p>true</p>;
       default:
         return <p>false</p>;
@@ -18,7 +19,7 @@ export default function App() {
   return (
     <div className="App">
     {kanjiGrades.map((grade, i) => (
-      <button key={i} onClick={changeGrade(i)}>{grade}</button>
+      <button key={i} onClick={() => changeGrade(i)}>{grade}</button>
     ))}
     <Kanjis grades={grade} />
     </div>
