@@ -1,12 +1,28 @@
-function Character(character) {
-  return (
-    <div>
-      <h3>Class: {character.class}</h3>
-      <p>Magic: {character.magic}</p>
-      <p>Armor: {character.armor}</p>
-      <p>Weapon: {Character.weapon}</p>
-    </div>
-  )
-};
+import { useEffect, useState } from 'react';
+import Character from './Character';
 
-export default Character;
+function List() {
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    const data = [
+      {'class': 'Wizard',
+      'magic': 'fire',
+      'armor': 'light',
+      'weapon': 'staff'
+    }, {'class': 'Paladin',
+    'magic': 'light',
+    'armor': 'plate',
+    'weapon': 'sword'}
+  ];
+  }, [characters.length]);
+  return (
+  <div>
+    <h2>Characters</h2>
+    <Character />
+    <Character />
+  </div>
+  )
+}
+
+export default List;
