@@ -8,6 +8,7 @@ export default function App() {
     <div className="App">
       <nav>
         <Link to="/categories">Categories</Link>
+        <Link to="/"> | Home</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home subTitle="more info to come" />} />
