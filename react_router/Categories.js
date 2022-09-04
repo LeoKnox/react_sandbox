@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 export default function Categories() {
   return (
     <>
@@ -6,6 +8,7 @@ export default function Categories() {
       <li>One</li>
       <li>Two</li>
     </ul>
+    <Outlet />
     </>
   )
 }
