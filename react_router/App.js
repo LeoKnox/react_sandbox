@@ -14,6 +14,7 @@ export default function App() {
         <Route path="categories" element={<Categories />}>
           <Route path="category" element={<Category />} />
         </Route>
+        <Route path="*" element={<h1>404 page not  found</h1>} />
       </Routes>
     </div>
   );
