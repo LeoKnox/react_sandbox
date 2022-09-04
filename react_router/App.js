@@ -11,9 +11,9 @@ export default function App() {
       <Bar />
       <Routes>
         <Route path="/" element={<Home subTitle="more info to come" />} />
-        <Route path="categories" element={<Categories />} />
-        <Route path="hello" element={<h1>routie</h1>} />
-        <Route path="categories/category" element={<Category />} />
+        <Route path="categories" element={<Categories />}>
+          <Route path="category" element={<Category />} />
+        </Route>
       </Routes>
     </div>
   );
