@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 import Home from "./Home.js";
 import Categories from "./Categories.js";
+import Category from "./Category.js";
 import Bar from "./nav.js";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Home subTitle="more info to come" />} />
         <Route path="categories" element={<Categories />} />
         <Route path="hello" element={<h1>routie</h1>} />
+        <Route path="categories/category" element={<Category />} />
       </Routes>
     </div>
   );
