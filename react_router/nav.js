@@ -1,11 +1,21 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Bar() {
   return (
     <>
     <nav>
-        <Link to="/categories">Categories</Link>
-        <Link to="/"> | Home</Link>
+        <NavLink 
+          style={({ isActive }) => ({
+            color:isActive ? "red" : "sienna",
+            fontWeight:isActive ? "normal" : "bold",
+          })}
+          to="/categories">Categories</NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            color:isActive ? "red" : "sienna",
+            fontWeight:isActive ? "normal" : "bold",
+          })}
+          to="/"> | Home</NavLink>
     </nav>
     </>
   )
