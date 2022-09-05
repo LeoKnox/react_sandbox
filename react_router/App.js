@@ -13,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Home subTitle="more info to come" />} />
         <Route path="categories" element={<Categories />}>
           <Route path=":catId" element={<Category />} />
+          <Route index element={<h3>Select above</h3>} />
         </Route>
         <Route path="*" element={<h1>404 page not  found</h1>} />
       </Routes>
